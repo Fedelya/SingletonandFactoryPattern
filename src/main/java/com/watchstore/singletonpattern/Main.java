@@ -1,13 +1,7 @@
 package com.watchstore.singletonpattern;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class SingletonPatternApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(SingletonPatternApplication.class, args);
+public class Main {
+    public static void main(String[] args) {
         // Test Eager Singleton
         System.out.println("Testing Eager Singleton:");
         EagerInitializedSingleton eager1 = EagerInitializedSingleton.getInstance();
@@ -21,6 +15,5 @@ public class SingletonPatternApplication {
         BillPughSingleton bill2 = BillPughSingleton.getInstance();
         bill1.showMessage();
         System.out.println("bill1 == bill2: " + (bill1 == bill2));
-	}
-
+    }
 }
